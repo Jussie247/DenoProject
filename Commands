@@ -1,0 +1,18 @@
+on first usage:
+- open terminal in VS Code
+- cd frontend
+- npm install
+
+to compile typescript in for frontend:
+- open terminal in VS Code
+- cd frontend
+- tsc script.ts
+
+to start the deno server:
+- open terminal in VS Code
+- deno run -A server.ts
+
+to restart the deno server after changes to code:
+- in terminal where deno server is running
+- CTRL + C
+- deno run -A server.ts

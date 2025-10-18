@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cookie Clicker</title>
+    <link rel="stylesheet" href="game.css" />
+    <script type="module" src="game.js" defer></script>
+</head>
+
+<body>
+    <!-- Top HUD (left) -->
+    <div class="hud">
+        <span id="hello">Welcome</span>
+        <span class="sep">•</span>
+        <button id="reset" type="button">Reset</button>
+        <span class="sep">•</span>
+        <a id="logout" href="/">Logout</a>
+        <span class="sep">•</span>
+        <div id="backpack" class="backpack" title="Inventory">
+            🎒
+            <span id="bp-indicator" class="indicator"></span>
+        </div>
+    </div>
+
+    <!-- Top-right: Global Leaderboard -->
+    <aside class="leaderboard">
+        <h2>Leaderboard</h2>
+        <ol id="lb-list"></ol>
+    </aside>
+
+    <!-- Center container for score + cookie -->
+    <div class="center">
+        <div id="score" class="score">Clicks: <span id="count">0</span></div>
+        <div id="cookie" class="cookie" title="Click me!"></div>
+    </div>
+
+    <!-- Inventory modal -->
+    <div id="inventory" class="inventory hidden">
+        <h2>Inventory</h2>
+        <div id="inventory-items"></div>
+    </div>
+</body>
+
+</html>

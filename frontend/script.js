@@ -28,16 +28,10 @@ async function login() {
     }
     const data = await res.json();
     if (data.success) {
-        currentUser = username;
-        const greetingElem = document.getElementById("greeting");
-        if (greetingElem)
-            greetingElem.innerText = "Hello " + currentUser;
-        const loginFormElem = document.getElementById("loginForm");
-        if (loginFormElem)
-            loginFormElem.style.display = "none";
-        const welcomeElem = document.getElementById("welcome");
-        if (welcomeElem)
-            welcomeElem.style.display = "block";
+        // Save username so main.html can greet the user
+        localStorage.setItem("username", username);
+        // Redirect to game page
+        window.location.href = "/main.html";
     }
     else {
         alert(data.message);

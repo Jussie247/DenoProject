@@ -1,0 +1,192 @@
+/* Reset page */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+
+body {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    background-attachment: fixed;
+    color: #e2e8f0;
+    font-family: "Inter", Arial, sans-serif;
+    user-select: none;
+    overflow: hidden;
+}
+
+/* HUD bar top-left */
+.hud {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    padding: 10px 14px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.hud .sep {
+    opacity: .35;
+}
+
+.hud a,
+.hud button {
+    color: #93c5fd;
+    background: transparent;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Backpack icon */
+.backpack {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.indicator {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    display: none;
+}
+
+/* Leaderboard top-right */
+.leaderboard {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    width: 240px;
+    max-height: 60vh;
+    overflow: auto;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    padding: 12px 14px;
+    border-radius: 12px;
+}
+
+.leaderboard h2 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #93c5fd;
+}
+
+.leaderboard ol {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.leaderboard li {
+    margin: 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .95rem;
+}
+
+/* Center container for score + cookie */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Score above cookie */
+.score {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+
+/* Cookie styling */
+.cookie {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    cursor: pointer;
+    background:
+        radial-gradient(circle at 65% 35%, #a86a2e 0 12px, transparent 12px),
+        radial-gradient(circle at 40% 60%, #8d4f1e 0 10px, transparent 10px),
+        radial-gradient(circle at 70% 70%, #8d4f1e 0 9px, transparent 9px),
+        radial-gradient(circle at 30% 30%, #8d4f1e 0 8px, transparent 8px),
+        radial-gradient(circle at 50% 50%, #b77a3a 0 70px, #b77a3a 70px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .35);
+    transition: transform 80ms ease;
+    touch-action: manipulation;
+}
+
+.cookie:active {
+    transform: scale(.96);
+}
+
+/* Pop animation on click */
+.pop {
+    animation: pop 220ms ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Inventory modal */
+.inventory {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 300px;
+    max-height: 50vh;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Count badge for stacked inventory items */
+.count-badge {
+    position: absolute;
+    bottom: -4px;
+    right: -6px;
+    font-size: 0.7rem;
+    background: rgba(239, 68, 68, 0.9);
+    color: white;
+    padding: 0 4px;
+    border-radius: 8px;
+}

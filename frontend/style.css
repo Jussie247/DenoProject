@@ -1,0 +1,111 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+}
+
+/* Login "bubble" */
+#loginForm {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+}
+
+/* Input fields */
+#loginForm input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#loginForm input:focus {
+    border-color: #6a5acd;
+    box-shadow: 0 0 0 3px rgba(106, 90, 205, 0.2);
+    outline: none;
+}
+
+/* Buttons */
+#loginForm button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s ease-in, background 0.2s;
+}
+
+#registerBtn {
+    background: #f0f0f0;
+    color: #333;
+}
+
+#registerBtn:hover {
+    background: #e0e0e0;
+}
+
+#loginBtn {
+    background: #6a5acd;
+    color: white;
+}
+
+#loginBtn:hover {
+    background: #5a4ac8;
+}
+
+#loginForm button:active {
+    transform: scale(0.97);
+}
+
+/* Welcome screen */
+#welcome {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+#welcome p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#logoutBtn {
+    background: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.1s;
+}
+
+#logoutBtn:hover {
+    background: #e04343;
+}
+
+#logoutBtn:active {
+    transform: scale(0.97);
+}
